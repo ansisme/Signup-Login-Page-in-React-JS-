@@ -89,6 +89,10 @@ const CheckboxInput = styled.input`
   margin-right: 10px;
 `;
 
+const link = styled.div`
+  align-items: center;
+`;
+
 function Signup() {
   return (
     <Container>
@@ -113,9 +117,13 @@ function Signup() {
           <InputLabel>CONFIRM PASSWORD</InputLabel>
           <Input type="password" placeholder="Confirm Password" />
         </Row>
-        <Link to="/login">
-          <Button>REGISTER</Button>
-        </Link>
+        {/* <Link to="/login" className = "link"> */}
+          <Button>
+              <Link to = "/login" style={{ color: 'white', textDecoration: 'none' }}>
+              REGISTER
+              </Link>
+          </Button>
+        {/* </Link> */}
 
         <CheckboxLabel htmlFor="agree">
           <CheckboxInput type="checkbox" id="agree" name="agree" />
